@@ -2,19 +2,21 @@ package sale;
 
 import java.util.ArrayList;
 
-import item.Item;
+import item.Item1;
 
-public class Sale {
+public class Sale1 {
 	
 	private static double DISCOUNT_RATE = 0.05;
 	
-	private ArrayList<Item> itemList = new ArrayList<Item>();
+	private ArrayList<Item1> itemList = new ArrayList<Item1>();
 	
-	public void addItem(Item item) {
+	public void addItem(Item1 item) {
 		itemList.add(item);
 	}
 	
-	public double getDiscountRate(){   return DISCOUNT_RATE; }  
+	public double getDiscountRate() {   
+		return DISCOUNT_RATE;
+	}  
 	 
 	public double getDiscount(){   
 		double discount = getSubTotal() * getDiscountRate();
@@ -23,8 +25,12 @@ public class Sale {
 	 
 	public double getSubTotal() { 
 		double subTotal = 0.0; 
-		for (Item item : itemList) {    
-	 		subTotal += item.getItemTotal(); }  return subTotal;  
+		double itemTotal = 0;
+		for (Item1 item : itemList) {  
+			itemTotal = item.getItemTotal();
+	 		subTotal += (itemTotal >= 0 ? itemTotal : 0);
+	 	}  
+		return subTotal;  
 	}    
 	 
 	public double getDiscountedSubTotal() {   

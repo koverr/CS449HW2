@@ -1,6 +1,6 @@
 package item;
 
-public class Item {
+public class Item1 {
 	
 	private String title;
 	private double itemTotal;
