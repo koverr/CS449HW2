@@ -10,7 +10,7 @@ public class Sale3 {
 	private static final String PREFERRED_CUSTOMER = "Preferred";
 	
 	private static final double DISCOUNT_RATE = 0.05;
-	private static final double DISCOUNT_RATE_SENIOR = 0.1;
+	private static final double DISCOUNT_RATE_SENIOR = 0.10;
 	private static final double DISCOUNT_RATE_PREFERRED = 0.15;
 	
 	// Tuesday is the third day of the 7 day week (0-6 with Sunday starting at 0)
